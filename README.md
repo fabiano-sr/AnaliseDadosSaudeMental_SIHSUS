@@ -14,91 +14,115 @@
 **2. Verificação das colunas com valores constantes em todos os registros.**
    > _Foram identificados 31 campos, dos quais 20 estavam evidenciados nos metadados._
 
-<div style="font-size: 12px;">
-    | SEQ | Campo | Tipo e Tam | Descrição/Observações | Valor Contante |
-    | :---: | :---: | :---: | :---- | :---: |
-    | 12 | UTI_MES_IN | numeric(2) | Zerado | [' 0'] |
-    | 13 | UTI_MES_AN | numeric(2) | Zerado | [' 0'] |
-    | 14 | UTI_MES_AL | numeric(2) | Zerado | [' 0'] |
-    | 17 | UTI_INT_IN | numeric(2) | Zerado | [' 0'] |
-    | 18 | UTI_INT_AN | numeric(2) | Zerado | [' 0'] |
-    | 19 | UTI_INT_AL | numeric(2) | Zerado | [' 0'] |
-    | 27 | VAL_SADT | numeric(13,2) | Zerado | [' 0.00'] |
-    | 28 | VAL_RN | numeric(13,2) | Zerado | [' 0.00'] |
-    | 29 | VAL_ACOMP | numeric(13,2) | Zerado | [' 0.00'] |
-    | 30 | VAL_ORTP | numeric(13,2) | Zerado | [' 0.00'] |
-    | 31 | VAL_SANGUE | numeric(13,2) | Zerado | [' 0.00'] |
-    | 32 | VAL_SADTSR | numeric(11,2) | Zerado | [' 0.00'] |
-    | 33 | VAL_TRANSP | numeric(13,2) | Zerado | [' 0.00'] |
-    | 34 | VAL_OBSANG | numeric(11,2) | Zerado | [' 0.00'] |
-    | 35 | VAL_PED1AC | numeric(11,2) | Zerado | [' 0.00'] |
-    | 42 | DIAG_SECUN | char(4) | Código do diagnostico secundário (CID10). Preenchido com zeros a partir de 201501. | ['0000'] |
-    | 44 | NATUREZA | char(2) | Natureza jurídica do hospital (com conteúdo até maio/12). Era utilizada a classificação de Regime e Natureza. | ['00'] |
-    | 47 | RUBRICA | numeric(5) | Zerado | [' 0'] |
-    | 55 | NUM_PROC | char(4) | Zerado | [''] |
-    | 57 | TOT_PT_SP | numeric(6) | Zerado | [' 0'] |
-    | 58 | CPF_AUT | char(11) | Zerado | [''] |
-    | 67 | SEQ_AIH5 | char(3) | Sequencial de longa permanência (AIH tipo 5). | ['000'] |
-    | 68 | CBOR | char(3) | Ocupação do paciente, segundo a Classificação Brasileira de Ocupações – CBO. | ['000000'] |
-    | 69 | CNAER | char(3) | Código de acidente de trabalho. | ['000'] |
-    | 70 | VINCPREV | char(1) | Vínculo com a Previdência. | ['0'] |
-    | 74 | GESTOR_DT | char(8) | Data da autorização dada pelo Gestor (aaaammdd). | [''] |
-    | 77 | INFEHOSP | char(1) | Status de infecção hospitalar. | [''] |
-    | 78 | CID_ASSO | char(4) | CID causa. | ['0000'] |
-    | 79 | CID_MORTE | char(4) | CID da morte. | ['0000'] |
-    | 92 | VAL_SH_GES | numeric (10, 2) | Valor do complemento do gestor (estadual ou municipal) de  serviços hospitalares. Está incluído no valor total da AIH. | [' 0.00'] |
-    | 93 | VAL_SP_GES | numeric (10, 2) | Valor do complemento do gestor (estadual ou municipal) de  serviços profissionais. Está incluído no valor total da AIH. | [' 0.00'] |
+<div style="text-align: center;">
+    <table style="font-size: 11px; border: 1px solid black; border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr>
+        <th style="text-align: center;">SEQ</th>
+        <th style="text-align: center;">Campo</th>
+        <th style="text-align: center;">Tipo e Tam</th>
+        <th>Descrição/Observações</th>
+        <th style="text-align: center;">Valor Contante</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td style="text-align: center;">12</td><td style="text-align: center;">UTI_MES_IN</td><td style="text-align: center;">numeric(2)</td><td>Zerado</td><td style="text-align: center;">[' 0']</td></tr>
+        <tr><td style="text-align: center;">13</td><td style="text-align: center;">UTI_MES_AN</td><td style="text-align: center;">numeric(2)</td><td>Zerado</td><td style="text-align: center;">[' 0']</td></tr>
+        <tr><td style="text-align: center;">14</td><td style="text-align: center;">UTI_MES_AL</td><td style="text-align: center;">numeric(2)</td><td>Zerado</td><td style="text-align: center;">[' 0']</td></tr>
+        <tr><td style="text-align: center;">17</td><td style="text-align: center;">UTI_INT_IN</td><td style="text-align: center;">numeric(2)</td><td>Zerado</td><td style="text-align: center;">[' 0']</td></tr>
+        <tr><td style="text-align: center;">18</td><td style="text-align: center;">UTI_INT_AN</td><td style="text-align: center;">numeric(2)</td><td>Zerado</td><td style="text-align: center;">[' 0']</td></tr>
+        <tr><td style="text-align: center;">19</td><td style="text-align: center;">UTI_INT_AL</td><td style="text-align: center;">numeric(2)</td><td>Zerado</td><td style="text-align: center;">[' 0']</td></tr>
+        <tr><td style="text-align: center;">27</td><td style="text-align: center;">VAL_SADT</td><td style="text-align: center;">numeric(13,2)</td><td>Zerado</td><td style="text-align: center;">[' 0.00']</td></tr>
+        <tr><td style="text-align: center;">28</td><td style="text-align: center;">VAL_RN</td><td style="text-align: center;">numeric(13,2)</td><td>Zerado</td><td style="text-align: center;">[' 0.00']</td></tr>
+        <tr><td style="text-align: center;">29</td><td style="text-align: center;">VAL_ACOMP</td><td style="text-align: center;">numeric(13,2)</td><td>Zerado</td><td style="text-align: center;">[' 0.00']</td></tr>
+        <tr><td style="text-align: center;">30</td><td style="text-align: center;">VAL_ORTP</td><td style="text-align: center;">numeric(13,2)</td><td>Zerado</td><td style="text-align: center;">[' 0.00']</td></tr>
+        <tr><td style="text-align: center;">31</td><td style="text-align: center;">VAL_SANGUE</td><td style="text-align: center;">numeric(13,2)</td><td>Zerado</td><td style="text-align: center;">[' 0.00']</td></tr>
+        <tr><td style="text-align: center;">32</td><td style="text-align: center;">VAL_SADTSR</td><td style="text-align: center;">numeric(11,2)</td><td>Zerado</td><td style="text-align: center;">[' 0.00']</td></tr>
+        <tr><td style="text-align: center;">33</td><td style="text-align: center;">VAL_TRANSP</td><td style="text-align: center;">numeric(13,2)</td><td>Zerado</td><td style="text-align: center;">[' 0.00']</td></tr>
+        <tr><td style="text-align: center;">34</td><td style="text-align: center;">VAL_OBSANG</td><td style="text-align: center;">numeric(11,2)</td><td>Zerado</td><td style="text-align: center;">[' 0.00']</td></tr>
+        <tr><td style="text-align: center;">35</td><td style="text-align: center;">VAL_PED1AC</td><td style="text-align: center;">numeric(11,2)</td><td>Zerado</td><td style="text-align: center;">[' 0.00']</td></tr>
+        <tr><td style="text-align: center;">42</td><td style="text-align: center;">DIAG_SECUN</td><td style="text-align: center;">char(4)</td><td>Código do diagnóstico secundário (CID10). Preenchido com zeros a partir de 201501.</td><td style="text-align: center;">['0000']</td></tr>
+        <tr><td style="text-align: center;">44</td><td style="text-align: center;">NATUREZA</td><td style="text-align: center;">char(2)</td><td>Natureza jurídica do hospital (com conteúdo até maio/12). Era utilizada a classificação de Regime e Natureza.</td><td style="text-align: center;">['00']</td></tr>
+        <tr><td style="text-align: center;">47</td><td style="text-align: center;">RUBRICA</td><td style="text-align: center;">numeric(5)</td><td>Zerado</td><td style="text-align: center;">[' 0']</td></tr>
+        <tr><td style="text-align: center;">55</td><td style="text-align: center;">NUM_PROC</td><td style="text-align: center;">char(4)</td><td>Zerado</td><td style="text-align: center;">['']</td></tr>
+        <tr><td style="text-align: center;">57</td><td style="text-align: center;">TOT_PT_SP</td><td style="text-align: center;">numeric(6)</td><td>Zerado</td><td style="text-align: center;">[' 0']</td></tr>
+        <tr><td style="text-align: center;">58</td><td style="text-align: center;">CPF_AUT</td><td style="text-align: center;">char(11)</td><td>Zerado</td><td style="text-align: center;">['']</td></tr>
+        <tr><td style="text-align: center;">67</td><td style="text-align: center;">SEQ_AIH5</td><td style="text-align: center;">char(3)</td><td>Sequencial de longa permanência (AIH tipo 5).</td><td style="text-align: center;">['000']</td></tr>
+        <tr><td style="text-align: center;">68</td><td style="text-align: center;">CBOR</td><td style="text-align: center;">char(3)</td><td>Ocupação do paciente, segundo a Classificação Brasileira de Ocupações – CBO.</td><td style="text-align: center;">['000000']</td></tr>
+        <tr><td style="text-align: center;">69</td><td style="text-align: center;">CNAER</td><td style="text-align: center;">char(3)</td><td>Código de acidente de trabalho.</td><td style="text-align: center;">['000']</td></tr>
+        <tr><td style="text-align: center;">70</td><td style="text-align: center;">VINCPREV</td><td style="text-align: center;">char(1)</td><td>Vínculo com a Previdência.</td><td style="text-align: center;">['0']</td></tr>
+        <tr><td style="text-align: center;">74</td><td style="text-align: center;">GESTOR_DT</td><td style="text-align: center;">char(8)</td><td>Data da autorização dada pelo Gestor (aaaammdd).</td><td style="text-align: center;">['']</td></tr>
+        <tr><td style="text-align: center;">77</td><td style="text-align: center;">INFEHOSP</td><td style="text-align: center;">char(1)</td><td>Status de infecção hospitalar.</td><td style="text-align: center;">['']</td></tr>
+        <tr><td style="text-align: center;">78</td><td style="text-align: center;">CID_ASSO</td><td style="text-align: center;">char(4)</td><td>CID causa.</td><td style="text-align: center;">['0000']</td></tr>
+        <tr><td style="text-align: center;">79</td><td style="text-align: center;">CID_MORTE</td><td style="text-align: center;">char(4)</td><td>CID da morte.</td><td style="text-align: center;">['0000']</td></tr>
+        <tr><td style="text-align: center;">92</td><td style="text-align: center;">VAL_SH_GES</td><td style="text-align: center;">numeric(10,2)</td><td>Valor do complemento do gestor (estadual ou municipal) de serviços hospitalares. Está incluído no valor total da AIH.</td><td style="text-align: center;">[' 0.00']</td></tr>
+        <tr><td style="text-align: center;">93</td><td style="text-align: center;">VAL_SP_GES</td><td style="text-align: center;">numeric(10,2)</td><td>Valor do complemento do gestor (estadual ou municipal) de serviços profissionais. Está incluído no valor total da AIH.</td><td style="text-align: center;">[' 0.00']</td></tr>
+    </tbody>
+    </table>
 </div>
 
 **3. Verificação dos campos com prevalência superior a 95% de registros com o mesmo valor.**
    > _Foram identificados 42 campos que atendem a essa condição._
 
-<div style="font-size: 12px;">
-    | SEQ | Campo | Tipo e Tam | Descrição/Observações | % Prevalência | Valor Prevalente |
-    | :---: | :---: | :---: | :----- | :---: | :---: |
-    | 15 | UTI_MES_TO | numeric(3) | Quantidade de dias de UTI no mês. | 99,9043 | ['0'] |
-    | 16 | MARCA_UTI | char(2) | Indica qual o tipo de UTI utilizada pelo paciente. | 99,9043 | ['00'] |
-    | 20 | UTI_INT_TO | numeric(3) | Quantidade de diárias em unidade intermediaria. | 99,9994 | ['0'] |
-    | 21 | DIAR_ACOM | numeric(3) | Quantidade de diárias de acompanhante. | 96,1405 | ['0'] |
-    | 37 | VAL_UTI | numeric(8,2) | Valor de UTI. | 99,9043 | ['0.00'] |
-    | 48 | IND_VDRL | char(1) | Indica exame VDRL. | 99,9419 | ['0'] |
-    | 53 | MORTE | numeric(1) | Indica Óbito | 99,8498 | ['0'] |
-    | 59 | HOMONIMO | char(1) | Indicador se o paciente da AIH é homônimo do paciente de  outra AIH. | 99,9893 | ['0'] |
-    | 60 | NUM_FILHOS | numeric(2) | Número de filhos do paciente. | 99,9997 | ['0'] |
-    | 61 | INSTRU | char(1) | Grau de instrução do paciente. | 99,9997 | ['0'] |
-    | 62 | CID_NOTIF | char(4) | CID de Notificação. | 99,9997 | [''] |
-    | 63 | CONTRACEP1 | char(2) | Tipo de contraceptivo utilizado. | 99,9997 | ['00'] |
-    | 64 | CONTRACEP2 | char(2) | Segundo tipo de contraceptivo utilizado. | 99,9997 | ['00'] |
-    | 65 | GESTRISCO | char(1) | Indicador se é gestante de risco. | 99,9997 | ['1'] |
-    | 66 | INSC_PN | char(12) | Número da gestante no pré-natal. | 99,9985 | ['000000000000'] |
-    | 71 | GESTOR_COD | char(3) | Motivo de autorização da AIH pelo Gestor. | 99,2392 | ['00000'] |
-    | 80 | COMPLEX | char(2) | Complexidade. | 99,9979 | ['02'] |
-    | 81 | FINANC | char(2) | Tipo de financiamento. | 99,9985 | ['06'] |
-    | 82 | FAEC_TP | char(6) | Subtipo de financiamento FAEC. | 99,9985 | [''] |
-    | 85 | ETNIA | char(4) | Etnia do paciente, se raça cor for indígena. | 99,9908 | ['0000'] |
-    | 88 | AUD_JUST | char (50) | Justificativa do auditor para aceitação da AIH sem o número do Cartão Nacional de Saúde. | 99,8743 | [''] |
-    | 89 | SIS_JUST | char (50) | Justificativa do estabelecimento para aceitação da AIH sem o  número do Cartão Nacional de Saúde. | 99,877 | [''] |
-    | 90 | VAL_SH_FED | numeric (10, 2) | Valor do complemento federal de serviços hospitalares. Está  incluído no valor total da AIH. | 99,9997 | ['0.00'] |
-    | 91 | VAL_SP_FED | numeric (10, 2) | Valor do complemento federal de serviços profissionais. Está  incluído no valor total da AIH. | 99,9997 | ['0.00'] |
-    | 94 | VAL_UCI | numeric (10, 2) | Valor de UCI. | 99,9994 | ['0.00'] |
-    | 95 | MARCA_UCI | char (2) | Tipo de UCI utilizada pelo paciente. | 99,9994 | ['00'] |
-    | 97 | DIAGSEC2 | char (4) | Diagnóstico secundário 2. | 97,7226 | [''] |
-    | 98 | DIAGSEC3 | char (4) | Diagnóstico secundário 3. | 99,3806 | [''] |
-    | 99 | DIAGSEC4 | char (4) | Diagnóstico secundário 4. | 99,7923 | [''] |
-    | 100 | DIAGSEC5 | char (4) | Diagnóstico secundário 5. | 99,9192 | [''] |
-    | 101 | DIAGSEC6 | char (4) | Diagnóstico secundário 6. | 99,9746 | [''] |
-    | 102 | DIAGSEC7 | char (4) | Diagnóstico secundário 7. | 99,9948 | [''] |
-    | 103 | DIAGSEC8 | char (4) | Diagnóstico secundário 8. | 99,9997 | [''] |
-    | 104 | DIAGSEC9 | char (4) | Diagnóstico secundário 9. | 99,9997 | [''] |
-    | 107 | TPDISEC2 | char(1) | Tipo de diagnóstico secundário 2. | 97,7226 | ['0'] |
-    | 108 | TPDISEC3 | char(1) | Tipo de diagnóstico secundário 3. | 99,3806 | ['0'] |
-    | 109 | TPDISEC4 | char(1) | Tipo de diagnóstico secundário 4. | 99,7923 | ['0'] |
-    | 110 | TPDISEC5 | char(1) | Tipo de diagnóstico secundário 5. | 99,9192 | ['0'] |
-    | 111 | TPDISEC6 | char(1) | Tipo de diagnóstico secundário 6. | 99,9746 | ['0'] |
-    | 112 | TPDISEC7 | char(1) | Tipo de diagnóstico secundário 7. | 99,9948 | ['0'] |
-    | 113 | TPDISEC8 | char(1) | Tipo de diagnóstico secundário 8. | 99,9997 | ['0'] |
-    | 114 | TPDISEC9 | char(1) | Tipo de diagnóstico secundário 9. | 99,9997 | ['0'] |
+<div style="text-align: center;">
+    <table style="font-size: 11px; border: 1px solid black; border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="text-align: center;">SEQ</th>
+      <th style="text-align: center;">Campo</th>
+      <th style="text-align: center;">Tipo e Tam</th>
+      <th>Descrição/Observações</th>
+      <th style="text-align: center;">% Prevalência</th>
+      <th style="text-align: center;">Valor Prevalente</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="text-align: center;">15</td><td style="text-align: center;">UTI_MES_TO</td><td style="text-align: center;">numeric(3)</td><td>Quantidade de dias de UTI no mês.</td><td style="text-align: center;">99,9043</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">16</td><td style="text-align: center;">MARCA_UTI</td><td style="text-align: center;">char(2)</td><td>Indica qual o tipo de UTI utilizada pelo paciente.</td><td style="text-align: center;">99,9043</td><td style="text-align: center;">['00']</td></tr>
+    <tr><td style="text-align: center;">20</td><td style="text-align: center;">UTI_INT_TO</td><td style="text-align: center;">numeric(3)</td><td>Quantidade de diárias em unidade intermediária.</td><td style="text-align: center;">99,9994</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">21</td><td style="text-align: center;">DIAR_ACOM</td><td style="text-align: center;">numeric(3)</td><td>Quantidade de diárias de acompanhante.</td><td style="text-align: center;">96,1405</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">37</td><td style="text-align: center;">VAL_UTI</td><td style="text-align: center;">numeric(8,2)</td><td>Valor de UTI.</td><td style="text-align: center;">99,9043</td><td style="text-align: center;">['0.00']</td></tr>
+    <tr><td style="text-align: center;">48</td><td style="text-align: center;">IND_VDRL</td><td style="text-align: center;">char(1)</td><td>Indica exame VDRL.</td><td style="text-align: center;">99,9419</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">53</td><td style="text-align: center;">MORTE</td><td style="text-align: center;">numeric(1)</td><td>Indica Óbito</td><td style="text-align: center;">99,8498</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">59</td><td style="text-align: center;">HOMONIMO</td><td style="text-align: center;">char(1)</td><td>Indicador se o paciente da AIH é homônimo do paciente de outra AIH.</td><td style="text-align: center;">99,9893</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">60</td><td style="text-align: center;">NUM_FILHOS</td><td style="text-align: center;">numeric(2)</td><td>Número de filhos do paciente.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">61</td><td style="text-align: center;">INSTRU</td><td style="text-align: center;">char(1)</td><td>Grau de instrução do paciente.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">62</td><td style="text-align: center;">CID_NOTIF</td><td style="text-align: center;">char(4)</td><td>CID de Notificação.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">63</td><td style="text-align: center;">CONTRACEP1</td><td style="text-align: center;">char(2)</td><td>Tipo de contraceptivo utilizado.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['00']</td></tr>
+    <tr><td style="text-align: center;">64</td><td style="text-align: center;">CONTRACEP2</td><td style="text-align: center;">char(2)</td><td>Segundo tipo de contraceptivo utilizado.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['00']</td></tr>
+    <tr><td style="text-align: center;">65</td><td style="text-align: center;">GESTRISCO</td><td style="text-align: center;">char(1)</td><td>Indicador se é gestante de risco.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['1']</td></tr>
+    <tr><td style="text-align: center;">66</td><td style="text-align: center;">INSC_PN</td><td style="text-align: center;">char(12)</td><td>Número da gestante no pré-natal.</td><td style="text-align: center;">99,9985</td><td style="text-align: center;">['000000000000']</td></tr>
+    <tr><td style="text-align: center;">71</td><td style="text-align: center;">GESTOR_COD</td><td style="text-align: center;">char(3)</td><td>Motivo de autorização da AIH pelo Gestor.</td><td style="text-align: center;">99,2392</td><td style="text-align: center;">['00000']</td></tr>
+    <tr><td style="text-align: center;">80</td><td style="text-align: center;">COMPLEX</td><td style="text-align: center;">char(2)</td><td>Complexidade.</td><td style="text-align: center;">99,9979</td><td style="text-align: center;">['02']</td></tr>
+    <tr><td style="text-align: center;">81</td><td style="text-align: center;">FINANC</td><td style="text-align: center;">char(2)</td><td>Tipo de financiamento.</td><td style="text-align: center;">99,9985</td><td style="text-align: center;">['06']</td></tr>
+    <tr><td style="text-align: center;">82</td><td style="text-align: center;">FAEC_TP</td><td style="text-align: center;">char(6)</td><td>Subtipo de financiamento FAEC.</td><td style="text-align: center;">99,9985</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">85</td><td style="text-align: center;">ETNIA</td><td style="text-align: center;">char(4)</td><td>Etnia do paciente, se raça cor for indígena.</td><td style="text-align: center;">99,9908</td><td style="text-align: center;">['0000']</td></tr>
+    <tr><td style="text-align: center;">88</td><td style="text-align: center;">AUD_JUST</td><td style="text-align: center;">char(50)</td><td>Justificativa do auditor para aceitação da AIH sem o número do Cartão Nacional de Saúde.</td><td style="text-align: center;">99,8743</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">89</td><td style="text-align: center;">SIS_JUST</td><td style="text-align: center;">char(50)</td><td>Justificativa do estabelecimento para aceitação da AIH sem o número do Cartão Nacional de Saúde.</td><td style="text-align: center;">99,877</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">90</td><td style="text-align: center;">VAL_SH_FED</td><td style="text-align: center;">numeric(10,2)</td><td>Valor do complemento federal de serviços hospitalares. Está incluído no valor total da AIH.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['0.00']</td></tr>
+    <tr><td style="text-align: center;">91</td><td style="text-align: center;">VAL_SP_FED</td><td style="text-align: center;">numeric(10,2)</td><td>Valor do complemento federal de serviços profissionais. Está incluído no valor total da AIH.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['0.00']</td></tr>
+    <tr><td style="text-align: center;">94</td><td style="text-align: center;">VAL_UCI</td><td style="text-align: center;">numeric(10,2)</td><td>Valor de UCI.</td><td style="text-align: center;">99,9994</td><td style="text-align: center;">['0.00']</td></tr>
+    <tr><td style="text-align: center;">95</td><td style="text-align: center;">MARCA_UCI</td><td style="text-align: center;">char(2)</td><td>Tipo de UCI utilizada pelo paciente.</td><td style="text-align: center;">99,9994</td><td style="text-align: center;">['00']</td></tr>
+    <tr><td style="text-align: center;">97</td><td style="text-align: center;">DIAGSEC2</td><td style="text-align: center;">char(4)</td><td>Diagnóstico secundário 2.</td><td style="text-align: center;">97,7226</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">98</td><td style="text-align: center;">DIAGSEC3</td><td style="text-align: center;">char(4)</td><td>Diagnóstico secundário 3.</td><td style="text-align: center;">99,3806</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">99</td><td style="text-align: center;">DIAGSEC4</td><td style="text-align: center;">char(4)</td><td>Diagnóstico secundário 4.</td><td style="text-align: center;">99,7923</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">100</td><td style="text-align: center;">DIAGSEC5</td><td style="text-align: center;">char(4)</td><td>Diagnóstico secundário 5.</td><td style="text-align: center;">99,9192</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">101</td><td style="text-align: center;">DIAGSEC6</td><td style="text-align: center;">char(4)</td><td>Diagnóstico secundário 6.</td><td style="text-align: center;">99,9746</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">102</td><td style="text-align: center;">DIAGSEC7</td><td style="text-align: center;">char(4)</td><td>Diagnóstico secundário 7.</td><td style="text-align: center;">99,9948</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">103</td><td style="text-align: center;">DIAGSEC8</td><td style="text-align: center;">char(4)</td><td>Diagnóstico secundário 8.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">104</td><td style="text-align: center;">DIAGSEC9</td><td style="text-align: center;">char(4)</td><td>Diagnóstico secundário 9.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['']</td></tr>
+    <tr><td style="text-align: center;">107</td><td style="text-align: center;">TPDISEC2</td><td style="text-align: center;">char(1)</td><td>Tipo de diagnóstico secundário 2.</td><td style="text-align: center;">97,7226</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">108</td><td style="text-align: center;">TPDISEC3</td><td style="text-align: center;">char(1)</td><td>Tipo de diagnóstico secundário 3.</td><td style="text-align: center;">99,3806</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">109</td><td style="text-align: center;">TPDISEC4</td><td style="text-align: center;">char(1)</td><td>Tipo de diagnóstico secundário 4.</td><td style="text-align: center;">99,7923</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">110</td><td style="text-align: center;">TPDISEC5</td><td style="text-align: center;">char(1)</td><td>Tipo de diagnóstico secundário 5.</td><td style="text-align: center;">99,9192</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">111</td><td style="text-align: center;">TPDISEC6</td><td style="text-align: center;">char(1)</td><td>Tipo de diagnóstico secundário 6.</td><td style="text-align: center;">99,9746</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">112</td><td style="text-align: center;">TPDISEC7</td><td style="text-align: center;">char(1)</td><td>Tipo de diagnóstico secundário 7.</td><td style="text-align: center;">99,9948</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">113</td><td style="text-align: center;">TPDISEC8</td><td style="text-align: center;">char(1)</td><td>Tipo de diagnóstico secundário 8.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['0']</td></tr>
+    <tr><td style="text-align: center;">114</td><td style="text-align: center;">TPDISEC9</td><td style="text-align: center;">char(1)</td><td>Tipo de diagnóstico secundário 9.</td><td style="text-align: center;">99,9997</td><td style="text-align: center;">['0']</td></tr>
+  </tbody>
+</table>
 </div>
+
 **4. Identificação de possível campo agrupador**  
    > _Devido à anonimização obrigatória pela LGPD, os dados de identificação dos pacientes não estão disponíveis no repositório DataSUS._
    > _Para suprir essa necessidade, o campo **N_AIH** foi testado e pode ser utilizado para essa função._  
